@@ -109,6 +109,9 @@ public class XMLConfigBuilder extends BaseBuilder {
             reflectorFactoryElement(root.evalNode("reflectorFactory"));
             settingsElement(settings);
             // read it after objectFactory and objectWrapperFactory issue #631
+            /**
+             *  environments
+             */
             environmentsElement(root.evalNode("environments"));
             databaseIdProviderElement(root.evalNode("databaseIdProvider"));
             typeHandlerElement(root.evalNode("typeHandlers"));
@@ -265,6 +268,9 @@ public class XMLConfigBuilder extends BaseBuilder {
         configuration.setConfigurationFactory(resolveClass(props.getProperty("configurationFactory")));
     }
 
+    /**
+     * environments 解析
+     */
     private void environmentsElement(XNode context) throws Exception {
         if (context != null) {
             if (environment == null) {
