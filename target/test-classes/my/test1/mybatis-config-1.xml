@@ -18,6 +18,4 @@
     <mappers>
         <mapper resource="my/test1/StudentMapper.xml"/>
     </mappers>
-
-
 </configuration>
