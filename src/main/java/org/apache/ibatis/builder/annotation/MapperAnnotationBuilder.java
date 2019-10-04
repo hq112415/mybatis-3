@@ -66,14 +66,20 @@ public class MapperAnnotationBuilder {
     }
 
     public void parse() {
-        String resource = type.toString();
+        String resource = type.toString(); // 例如my.test2.StudentMapper
         if (!configuration.isResourceLoaded(resource)) {
+            //重点在这里，这里面是配置文件的解析
             loadXmlResource();
+
             configuration.addLoadedResource(resource);
+            /*
+             * 这里对应 my.test2.StudentMapper
+             */
             assistant.setCurrentNamespace(type.getName());
             parseCache();
             parseCacheRef();
             Method[] methods = type.getMethods();
+            //这里面是method上的注解解析
             for (Method method : methods) {
                 try {
                     // issue #237
@@ -103,11 +109,24 @@ public class MapperAnnotationBuilder {
         }
     }
 
+    /**
+     * 加载并解析xml配置文件
+     */
     private void loadXmlResource() {
         // Spring may not know the real resource name so we check a flag
         // to prevent loading again a resource twice
         // this flag is set at XMLMapperBuilder#bindMapperForNamespace
+        /**
+         * 这里面用了两种加载方式做尝试：
+         * 1. 直接在mapper接口所在目录下查找
+         * 2. classpath目录下加载，所以在项目开发时为了避免接口类和配置文件混在一起，可以把
+         *    配置文件放在resource目录下，但是把包名改为和接口类相同
+         */
         if (!configuration.isResourceLoaded("namespace:" + type.getName())) {
+            /**
+             *这里把.替换成了/，最后加上.xml，确定了一个mapper.xml文件的所在
+             * 例如my.test2.StudentMapper 变为 my/test2/StudentMapper.xml
+             */
             String xmlResource = type.getName().replace('.', '/') + ".xml";
             // #1347
             InputStream inputStream = type.getResourceAsStream("/" + xmlResource);
@@ -120,6 +139,19 @@ public class MapperAnnotationBuilder {
                 }
             }
             if (inputStream != null) {
+                /**
+                 * 这里
+                 *     public XMLMapperBuilder(InputStream inputStream, Configuration configuration, String resource, Map<String, XNode> sqlFragments, String namespace) {
+                 *         this(inputStream, configuration, resource, sqlFragments);
+                 *         this.builderAssistant.setCurrentNamespace(namespace);
+                 *     }
+                 * 注意构造函数内设置了setCurrentNamespace，即type的全路径名，由于这里设置了，所以
+                 * 使用 <mapper class="my.test2.StudentMapper"/>
+                 * 方式配置时，必需保证配置文件的namespace和mapper接口报名一致，否则
+                 * 后面在解析时会做检查报错
+                 *
+                 * 当然如果使用 <mapper resource="my/test1/StudentMapper.xml"/>方式，倒是不需要
+                 */
                 XMLMapperBuilder xmlParser = new XMLMapperBuilder(inputStream, assistant.getConfiguration(), xmlResource, configuration.getSqlFragments(), type.getName());
                 xmlParser.parse();
             }
@@ -240,11 +272,13 @@ public class MapperAnnotationBuilder {
 
     void parseStatement(Method method) {
         Class<?> parameterTypeClass = getParameterType(method);
+
         LanguageDriver languageDriver = getLanguageDriver(method);
+        //这个是方法上的解析注解相关的，例如SelectProvider、
         SqlSource sqlSource = getSqlSourceFromAnnotations(method, parameterTypeClass, languageDriver);
         if (sqlSource != null) {
             Options options = method.getAnnotation(Options.class);
-            final String mappedStatementId = type.getName() + "." + method.getName();
+            final String mappedStatementId = type.getName() + "." + method.getName(); //
             Integer fetchSize = null;
             Integer timeout = null;
             StatementType statementType = StatementType.PREPARED;
@@ -407,6 +441,9 @@ public class MapperAnnotationBuilder {
         return returnType;
     }
 
+    /**
+     * mapper接口注解相关解析
+     */
     private SqlSource getSqlSourceFromAnnotations(Method method, Class<?> parameterType, LanguageDriver languageDriver) {
         try {
             Class<? extends Annotation> sqlAnnotationType = getSqlAnnotationType(method);
@@ -418,8 +455,11 @@ public class MapperAnnotationBuilder {
                 Annotation sqlAnnotation = method.getAnnotation(sqlAnnotationType);
                 final String[] strings = (String[]) sqlAnnotation.getClass().getMethod("value").invoke(sqlAnnotation);
                 return buildSqlSourceFromStrings(strings, parameterType, languageDriver);
-            } else if (sqlProviderAnnotationType != null) {
+            }
+            //SelectProvider注解
+            else if (sqlProviderAnnotationType != null) {
                 Annotation sqlProviderAnnotation = method.getAnnotation(sqlProviderAnnotationType);
+
                 return new ProviderSqlSource(assistant.getConfiguration(), sqlProviderAnnotation, type, method);
             }
             return null;

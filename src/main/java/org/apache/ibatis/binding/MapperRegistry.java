@@ -49,6 +49,9 @@ public class MapperRegistry {
                 // It's important that the type is added before the parser is run
                 // otherwise the binding may automatically be attempted by the
                 // mapper parser. If the type is already known, it won't try.
+                /**
+                 * 这里type = my.test2.StudentMapper.class
+                 */
                 MapperAnnotationBuilder parser = new MapperAnnotationBuilder(config, type);
                 parser.parse();
                 loadCompleted = true;

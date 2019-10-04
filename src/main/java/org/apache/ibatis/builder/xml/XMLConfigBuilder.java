@@ -113,8 +113,14 @@ public class XMLConfigBuilder extends BaseBuilder {
              *  environments
              */
             environmentsElement(root.evalNode("environments"));
+            /**
+             * databaseId 数据库提供厂商，oracle、mysql等，它会加入mapper的唯一id中
+             */
             databaseIdProviderElement(root.evalNode("databaseIdProvider"));
             typeHandlerElement(root.evalNode("typeHandlers"));
+            /**
+             * mapper配置文件开始解析
+             */
             mapperElement(root.evalNode("mappers"));
         } catch (Exception e) {
             throw new BuilderException("Error parsing SQL Mapper Configuration. Cause: " + e, e);
@@ -369,17 +375,33 @@ public class XMLConfigBuilder extends BaseBuilder {
                     String resource = child.getStringAttribute("resource");
                     String url = child.getStringAttribute("url");
                     String mapperClass = child.getStringAttribute("class");
+                    /**
+                     * 直接写配置文件名称的方式
+                     * <mapper resource="my/test1/StudentMapper.xml"/>
+                     */
                     if (resource != null && url == null && mapperClass == null) {
                         ErrorContext.instance().resource(resource);
                         InputStream inputStream = Resources.getResourceAsStream(resource);
                         XMLMapperBuilder mapperParser = new XMLMapperBuilder(inputStream, configuration, resource, configuration.getSqlFragments());
                         mapperParser.parse();
-                    } else if (resource == null && url != null && mapperClass == null) {
+                    }
+                    /**
+                     * url方式
+                     */
+                    else if (resource == null && url != null && mapperClass == null) {
                         ErrorContext.instance().resource(url);
                         InputStream inputStream = Resources.getUrlAsStream(url);
                         XMLMapperBuilder mapperParser = new XMLMapperBuilder(inputStream, configuration, url, configuration.getSqlFragments());
                         mapperParser.parse();
-                    } else if (resource == null && url == null && mapperClass != null) {
+                    }
+                    /**
+                     *  <mapper class="my.test2.StudentMapper"/> 这种方式
+                     *  它和直接写配置文件名称的方式相比，多了
+                     *  1. 根据mapper接口类记载配置文件；
+                     *  2. 检查namespace和mapper接口类全路径名是否一致
+                     *  其实是为了把这个mapper接口类和这个mapper配置文件做对应放入mapperRegistry中，为后面使用getMapper做铺垫
+                     */
+                    else if (resource == null && url == null && mapperClass != null) {
                         Class<?> mapperInterface = Resources.classForName(mapperClass);
                         configuration.addMapper(mapperInterface);
                     } else {

@@ -50,14 +50,14 @@ public class XMLStatementBuilder extends BaseBuilder {
     }
 
     public void parseStatementNode() {
-        String id = context.getStringAttribute("id");
-        String databaseId = context.getStringAttribute("databaseId");
+        String id = context.getStringAttribute("id"); //例如 selectById
+        String databaseId = context.getStringAttribute("databaseId"); //可以不定义，为null
 
         if (!databaseIdMatchesCurrent(id, databaseId, this.requiredDatabaseId)) {
             return;
         }
 
-        String nodeName = context.getNode().getNodeName();
+        String nodeName = context.getNode().getNodeName(); //mapper节点名称 例如select
         SqlCommandType sqlCommandType = SqlCommandType.valueOf(nodeName.toUpperCase(Locale.ENGLISH));
         boolean isSelect = sqlCommandType == SqlCommandType.SELECT;
         boolean flushCache = context.getBooleanAttribute("flushCache", !isSelect);
@@ -79,7 +79,11 @@ public class XMLStatementBuilder extends BaseBuilder {
 
         // Parse the SQL (pre: <selectKey> and <include> were parsed and removed)
         KeyGenerator keyGenerator;
-        String keyStatementId = id + SelectKeyGenerator.SELECT_KEY_SUFFIX;
+        String keyStatementId = id + SelectKeyGenerator.SELECT_KEY_SUFFIX; //例如 selectById!selectKey
+        /**
+         * 这里 namespace会用到mapper的定位上
+         * keyStatementId =  currentNamespace + "." + base;
+         */
         keyStatementId = builderAssistant.applyCurrentNamespace(keyStatementId, true);
         if (configuration.hasKeyGenerator(keyStatementId)) {
             keyGenerator = configuration.getKeyGenerator(keyStatementId);
@@ -89,7 +93,7 @@ public class XMLStatementBuilder extends BaseBuilder {
                     ? Jdbc3KeyGenerator.INSTANCE : NoKeyGenerator.INSTANCE;
         }
 
-        SqlSource sqlSource = langDriver.createSqlSource(configuration, context, parameterTypeClass);
+        SqlSource sqlSource = langDriver.createSqlSource(configuration, context, parameterTypeClass); //sqlSource记录了这个sql的详细信息，包括sql语句，以及参数等
         StatementType statementType = StatementType.valueOf(context.getStringAttribute("statementType", StatementType.PREPARED.toString()));
         Integer fetchSize = context.getIntAttribute("fetchSize");
         Integer timeout = context.getIntAttribute("timeout");
