@@ -211,7 +211,21 @@ public class DefaultSqlSessionFactory implements SqlSessionFactory {
 这里SqlSession相关的DefaultSqlSession和SqlSessionManager就这些，总结：
 
 1. SqlSessionManager是用来管理SqlSession的，这里的管理是为了做个优化，对于同一个线程都使用同一个sqlSession，这个sqlSession放在了ThreadLocal中；SqlSessionManager打开时创建一个放进去，结束时剔除掉；
+
 2. SqlSessionManager有一个sqlSessionProxy的内部类，它代理的是SqlSession，代理的InvocationHandler是SqlSessionInterceptor，SqlSessionInterceptor的invoke主要逻辑是从存放sqlSession的ThreadLocal中获取可用的sqlSession，这是代理的目的所在；
+
 3. SqlSessionManager管理的SqlSession的创建者是DefaultSqlSessionFactory;
-4. DefaultSqlSessionFactory的openSession，默认创建的是DefaultSqlSession，DefaultSqlSession主要创建了一个Executor，本来是是SimpleExecutor，但是mybatis默认开启了缓存，所以最后创建的是CachingExecutor。
+
+4. DefaultSqlSessionFactory的openSession，默认创建的是DefaultSqlSession，DefaultSqlSession主要创建了一个Executor，本来是是SimpleExecutor，但是mybatis默认开启了缓存，所以最后创建的是CachingExecutor;
+
+5. SqlSessionManager的使用时需要startManagedSession，否则类似
+
+   ```java
+   SqlSessionManager.query1();
+   SqlSessionManager.query2();
+   ```
+
+   会开启两个sqlSession；
+
+6. 直接使用sqlSession是非线程安全的，SqlSessionManager可以保证，就是5提到的两种方式，一个使用ThrealLocal来保证一个线程一个sqlSession，一个用多实例的方式保证一个线程一个sqlSession实例。
 

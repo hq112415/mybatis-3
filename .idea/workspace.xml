@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f20b8e1-3e20-4d51-b590-10ebb09d3a3f" name="Default" comment="" />
+    <list default="true" id="5f20b8e1-3e20-4d51-b590-10ebb09d3a3f" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/bolg/Mapper代理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bolg/SqlSesson与SqlSessionFactory.md" beforeDir="false" afterPath="$PROJECT_DIR$/bolg/SqlSesson.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +35,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="DefaultSqlSession.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+            <state relative-caret-position="215">
+              <caret line="271" column="34" selection-start-line="271" selection-start-column="34" selection-end-line="271" selection-end-column="34" />
+              <folding>
+                <element signature="e#8906#8907#0" expanded="true" />
+                <element signature="e#8964#8965#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="750" column="35" selection-start-line="750" selection-start-column="35" selection-end-line="750" selection-end-column="35" />
+              <folding>
+                <element signature="e#11935#11936#0" expanded="true" />
+                <element signature="e#11980#11981#0" expanded="true" />
+                <element signature="e#12136#12137#0" expanded="true" />
+                <element signature="e#12170#12171#0" expanded="true" />
+                <element signature="e#14443#14444#0" expanded="true" />
+                <element signature="e#14485#14486#0" expanded="true" />
+                <element signature="e#17165#17166#0" expanded="true" />
+                <element signature="e#17202#17203#0" expanded="true" />
+                <element signature="e#25767#25768#0" expanded="true" />
+                <element signature="e#25813#25814#0" expanded="true" />
+                <element signature="e#25881#25882#0" expanded="true" />
+                <element signature="e#25946#25947#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SqlSessionTemplateTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/my/test2/SqlSessionTemplateTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultSqlSessionFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
+              <folding>
+                <element signature="e#4094#4095#0" expanded="true" />
+                <element signature="e#4130#4131#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapperRegistry.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperRegistry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="373">
+              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+              <folding>
+                <element signature="e#552#553#0" expanded="true" />
+                <element signature="e#588#589#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapperProxyFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="343">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StudentMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/my/test2/StudentMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapperProxy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-20">
+              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapperMethod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -85,15 +192,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/jdbc/SqlRunner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/logging/Log.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/logging/jdbc/ResultSetLogger.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/logging/jdbc/StatementLogger.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/jdbc/ScriptRunner.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/resources/nodelet_test.xml" />
         <option value="$PROJECT_DIR$/src/test/java/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/cache/decorators/SoftCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/logging/LogFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/FetchType.java" />
@@ -129,13 +233,16 @@
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java" />
         <option value="$PROJECT_DIR$/src/test/java/my/test1/SqlSessionTemplateTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java" />
+        <option value="$PROJECT_DIR$/src/test/java/my/test2/SqlSessionTemplateTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java" />
       </list>
     </option>
   </component>
@@ -205,7 +312,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="confi&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/Configuration.java&#10;sqlsession&#9;PSI&#9;JAVA://org.apache.ibatis.session.SqlSession&#10;mappedst&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/mapping/MappedStatement.java&#10;SelectKeyGenerator&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/executor/keygen/SelectKeyGenerator.java&#10;Jdbc3KeyGenerator&#9;PSI&#9;JAVA://org.apache.ibatis.submitted.keygen.Jdbc3KeyGeneratorTest&#10;stdout&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/logging/stdout/StdOutImpl.java&#10;confibuil&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java&#10;configu&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/Configuration.java&#10;instantiateStatement&#9;PSI&#9;JAVA://org.apache.ibatis.executor.statement.BaseStatementHandler#instantiateStatement&#10;log4j&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/logging/log4j2/Log4j2Impl.java&#10;simpleexec&#9;PSI&#9;JAVA://org.apache.ibatis.executor.SimpleExecutor&#10;defau&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java&#10;proxyge&#9;PSI&#9;JAVA://sun.misc.ProxyGenerator&#10;sqlsessionma&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/SqlSessionManager.java&#10;defaults&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java&#10;defaultsqlsessionfac&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java&#10;default&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/test/java/local/test1/DefaultSqlSessionTest.java" />
+    <property name="SearchEverywhereHistoryKey" value="defaultS&#9;PSI&#9;JAVA://org.apache.ibatis.session.defaults.DefaultSqlSession&#10;confi&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/Configuration.java&#10;sqlsession&#9;PSI&#9;JAVA://org.apache.ibatis.session.SqlSession&#10;mappedst&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/mapping/MappedStatement.java&#10;SelectKeyGenerator&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/executor/keygen/SelectKeyGenerator.java&#10;Jdbc3KeyGenerator&#9;PSI&#9;JAVA://org.apache.ibatis.submitted.keygen.Jdbc3KeyGeneratorTest&#10;stdout&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/logging/stdout/StdOutImpl.java&#10;confibuil&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java&#10;configu&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/Configuration.java&#10;instantiateStatement&#9;PSI&#9;JAVA://org.apache.ibatis.executor.statement.BaseStatementHandler#instantiateStatement&#10;log4j&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/logging/log4j2/Log4j2Impl.java&#10;simpleexec&#9;PSI&#9;JAVA://org.apache.ibatis.executor.SimpleExecutor&#10;defau&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java&#10;proxyge&#9;PSI&#9;JAVA://sun.misc.ProxyGenerator&#10;sqlsessionma&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/SqlSessionManager.java&#10;defaults&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java&#10;defaultsqlsessionfac&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java&#10;default&#9;FILE&#9;file:///Users/HQ/soft/java_project/mybatis-3/src/test/java/local/test1/DefaultSqlSessionTest.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test" />
@@ -240,7 +347,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SqlSessionTemplateTest.testCase1 (1)">
+  <component name="RunManager" selected="JUnit.SqlSessionTemplateTest.testCase1">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -373,8 +480,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SqlSessionTemplateTest.testCase1 (1)" />
         <item itemvalue="JUnit.SqlSessionTemplateTest.testCase1" />
+        <item itemvalue="JUnit.SqlSessionTemplateTest.testCase1 (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -395,20 +502,11 @@
       <workItem from="1569737838114" duration="14880000" />
       <workItem from="1570079731104" duration="15572000" />
       <workItem from="1570107345662" duration="63000" />
-      <workItem from="1570107436369" duration="5965000" />
+      <workItem from="1570107436369" duration="9278000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SqlSessionTemplateTest_testCase1 - 2019.10.03 at 15h 11m 36s.xml">
-      <configuration name="SqlSessionTemplateTest.testCase1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SqlSessionTemplateTest_testCase1 - 2019.10.03 at 15h 12m 20s.xml">
-      <configuration name="SqlSessionTemplateTest.testCase1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SqlSessionTemplateTest_testCase1 - 2019.10.03 at 15h 49m 07s.xml">
-      <configuration name="SqlSessionTemplateTest.testCase1" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SqlSessionTemplateTest_testCase1 - 2019.10.03 at 15h 49m 31s.xml">
       <configuration name="SqlSessionTemplateTest.testCase1" configurationId="JUnit" />
     </history-entry>
@@ -430,9 +528,18 @@
     <history-entry file="SqlSessionTemplateTest_testCase1_(1) - 2019.10.03 at 22h 30m 20s.xml">
       <configuration name="SqlSessionTemplateTest.testCase1 (1)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SqlSessionTemplateTest_testCase1_(1) - 2019.10.04 at 14h 51m 08s.xml">
+      <configuration name="SqlSessionTemplateTest.testCase1 (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SqlSessionTemplateTest_testCase1_(1) - 2019.10.04 at 14h 51m 23s.xml">
+      <configuration name="SqlSessionTemplateTest.testCase1 (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SqlSessionTemplateTest_testCase1 - 2019.10.04 at 14h 51m 40s.xml">
+      <configuration name="SqlSessionTemplateTest.testCase1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62348000" />
+    <option name="totallyTimeSpent" value="65661000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -445,6 +552,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="738" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" show_stripe_button="false" />
@@ -454,16 +562,16 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32980457" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.58870965" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32096773" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31935483" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4048387" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22964169" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.20602606" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" weight="0.32980457" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.45" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.12258065" />
       <window_info anchor="bottom" id="Alibaba Cloud View" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -513,7 +621,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="75" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="78" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -566,59 +682,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://JAVA/org.apache.ibatis.executor.statement.StatementHandler">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>org.apache.ibatis.executor.statement.StatementHandler</OriginalElement>
-          <nodes>
-            <node x="" y="">org.apache.ibatis.executor.statement.StatementHandler</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="96.0" y="18.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/BatchExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/StatementHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/sql/PreparedStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/mapping/ResultSetType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/executor/statement/SimpleStatementHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -658,13 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="105" column="36" lean-forward="true" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -843,13 +899,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bolg/SqlSesson与SqlSessionFactory.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSession.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -857,24 +906,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/io/Closeable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -893,81 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="273" column="29" selection-start-line="273" selection-start-column="17" selection-end-line="273" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/my/test1/SqlSessionTemplateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="38" column="54" lean-forward="true" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
-          <folding>
-            <element signature="e#2651#2652#0" expanded="true" />
-            <element signature="e#2716#2717#0" expanded="true" />
-            <element signature="e#2778#2779#0" expanded="true" />
-            <element signature="e#2843#2844#0" expanded="true" />
-            <element signature="e#2915#2916#0" expanded="true" />
-            <element signature="e#2975#2976#0" expanded="true" />
-            <element signature="e#3037#3038#0" expanded="true" />
-            <element signature="e#3100#3101#0" expanded="true" />
-            <element signature="e#3630#3631#0" expanded="true" />
-            <element signature="e#3687#3688#0" expanded="true" />
-            <element signature="e#3740#3741#0" expanded="true" />
-            <element signature="e#3794#3795#0" expanded="true" />
-            <element signature="e#3865#3866#0" expanded="true" />
-            <element signature="e#3929#3930#0" expanded="true" />
-            <element signature="e#4003#4004#0" expanded="true" />
-            <element signature="e#4067#4068#0" expanded="true" />
-            <element signature="e#4151#4152#0" expanded="true" />
-            <element signature="e#4210#4211#0" expanded="true" />
-            <element signature="e#4284#4285#0" expanded="true" />
-            <element signature="e#4346#4347#0" expanded="true" />
-            <element signature="e#4922#4923#0" expanded="true" />
-            <element signature="e#4981#4982#0" expanded="true" />
-            <element signature="e#5043#5044#0" expanded="true" />
-            <element signature="e#5102#5103#0" expanded="true" />
-            <element signature="e#5880#5881#0" expanded="true" />
-            <element signature="e#5942#5943#0" expanded="true" />
-            <element signature="e#6371#6372#0" expanded="true" />
-            <element signature="e#6431#6432#0" expanded="true" />
-            <element signature="e#6860#6861#0" expanded="true" />
-            <element signature="e#6918#6919#0" expanded="true" />
-            <element signature="e#7343#7344#0" expanded="true" />
-            <element signature="e#7399#7400#0" expanded="true" />
-            <element signature="e#7474#7475#0" expanded="true" />
-            <element signature="e#7541#7542#0" expanded="true" />
-            <element signature="e#7598#7599#0" expanded="true" />
-            <element signature="e#7654#7655#0" expanded="true" />
-            <element signature="e#7729#7730#0" expanded="true" />
-            <element signature="e#7796#7797#0" expanded="true" />
-            <element signature="e#7853#7854#0" expanded="true" />
-            <element signature="e#7909#7910#0" expanded="true" />
-            <element signature="e#7984#7985#0" expanded="true" />
-            <element signature="e#8051#8052#0" expanded="true" />
-            <element signature="e#8110#8111#0" expanded="true" />
-            <element signature="e#8173#8174#0" expanded="true" />
-            <element signature="e#10982#10983#0" expanded="true" />
-            <element signature="e#11037#11038#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="65" column="59" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
-          <folding>
-            <element signature="e#3005#3006#0" expanded="true" />
-            <element signature="e#3076#3077#0" expanded="true" />
-            <element signature="e#4013#4014#0" expanded="true" />
-            <element signature="e#4049#4050#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -996,26 +956,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="624" lean-forward="true" selection-start-line="624" selection-end-line="624" />
-          <folding>
-            <element signature="e#11935#11936#0" expanded="true" />
-            <element signature="e#11980#11981#0" expanded="true" />
-            <element signature="e#12136#12137#0" expanded="true" />
-            <element signature="e#12170#12171#0" expanded="true" />
-            <element signature="e#14443#14444#0" expanded="true" />
-            <element signature="e#14485#14486#0" expanded="true" />
-            <element signature="e#25767#25768#0" expanded="true" />
-            <element signature="e#25813#25814#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bolg/SqlSesson.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SECOND">
+          <first_editor relative-caret-position="403">
+            <caret line="227" column="19" lean-forward="true" selection-start-line="227" selection-start-column="19" selection-end-line="227" selection-end-column="19" />
+            <folding>
+              <element signature="e#0#518#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
+        <state split_layout="FIRST">
           <first_editor relative-caret-position="68">
             <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
           </first_editor>
@@ -1023,10 +991,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/test/java/my/test1/SqlSessionTemplateTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
+        <state relative-caret-position="306">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="271" column="34" selection-start-line="271" selection-start-column="34" selection-end-line="271" selection-end-column="34" />
+          <folding>
+            <element signature="e#8906#8907#0" expanded="true" />
+            <element signature="e#8964#8965#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bolg/Mapper代理.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="115" column="23" selection-start-line="115" selection-start-column="23" selection-end-line="115" selection-end-column="23" />
+          <folding>
+            <element signature="e#4094#4095#0" expanded="true" />
+            <element signature="e#4130#4131#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="260" column="36" lean-forward="true" selection-start-line="260" selection-start-column="36" selection-end-line="260" selection-end-column="36" />
+          <folding>
+            <element signature="e#8458#8459#0" expanded="true" />
+            <element signature="e#8521#8522#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="750" column="35" selection-start-line="750" selection-start-column="35" selection-end-line="750" selection-end-column="35" />
+          <folding>
+            <element signature="e#11935#11936#0" expanded="true" />
+            <element signature="e#11980#11981#0" expanded="true" />
+            <element signature="e#12136#12137#0" expanded="true" />
+            <element signature="e#12170#12171#0" expanded="true" />
+            <element signature="e#14443#14444#0" expanded="true" />
+            <element signature="e#14485#14486#0" expanded="true" />
+            <element signature="e#17165#17166#0" expanded="true" />
+            <element signature="e#17202#17203#0" expanded="true" />
+            <element signature="e#25767#25768#0" expanded="true" />
+            <element signature="e#25813#25814#0" expanded="true" />
+            <element signature="e#25881#25882#0" expanded="true" />
+            <element signature="e#25946#25947#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <folding>
+            <element signature="e#552#553#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/my/test2/SqlSessionTemplateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/my/test2/StudentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
         </state>
       </provider>
     </entry>

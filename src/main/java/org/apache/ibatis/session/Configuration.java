@@ -109,7 +109,12 @@ public class Configuration {
      * @see <a href='https://code.google.com/p/mybatis/issues/detail?id=300'>Issue 300 (google code)</a>
      */
     protected Class<?> configurationFactory;
-
+    /**
+     * 一个Configuration对应一个mapperRegistry，看名字也知道它存储了Mapper的配置信息，也就是一个mapper.xml对应一个配置信息
+     * private final Map<Class<?>, MapperProxyFactory<?>> knownMappers = new HashMap<>();
+     * 它其实就是一个map，一个Class对应一个MapperProxyFactory，例如
+     * 一个StudentMapper.class--->MapperProxyFactory<StudentMapper>
+     */
     protected final MapperRegistry mapperRegistry = new MapperRegistry(this);
     protected final InterceptorChain interceptorChain = new InterceptorChain();
     protected final TypeHandlerRegistry typeHandlerRegistry = new TypeHandlerRegistry();

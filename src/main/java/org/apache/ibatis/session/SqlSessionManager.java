@@ -149,6 +149,10 @@ public class SqlSessionManager implements SqlSessionFactory, SqlSession {
 
     @Override
     public Configuration getConfiguration() {
+        /**
+         * 这里sqlSessionFactory就是DefaultSqlSessionFactory，一个DefaultSqlSessionFactory和一个Configuration对应，
+         * Configuration就是解析xml配置文件得到一个配置类
+         */
         return sqlSessionFactory.getConfiguration();
     }
 
