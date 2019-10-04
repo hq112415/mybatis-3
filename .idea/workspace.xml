@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f20b8e1-3e20-4d51-b590-10ebb09d3a3f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bolg/Mapper代理.md" beforeDir="false" afterPath="$PROJECT_DIR$/bolg/Mapper代理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/MapperBuilderAssistant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/MapperBuilderAssistant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/annotation/MapperAnnotationBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/annotation/MapperAnnotationBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLConfigBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLStatementBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLStatementBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/io/ResolverUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/io/ResolverUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/my/test1/SqlSessionTemplateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/my/test1/SqlSessionTemplateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,24 +72,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XMLMapperBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="113" column="37" selection-start-line="113" selection-start-column="37" selection-end-line="113" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Resources.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/io/Resources.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="260" column="39" selection-start-line="260" selection-start-column="39" selection-end-line="260" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Configuration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/Configuration.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -140,11 +112,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SqlSessionTemplateTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SqlSessionTemplateTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/my/test1/SqlSessionTemplateTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+            <state relative-caret-position="272">
+              <caret line="24" column="69" lean-forward="true" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SqlSessionTemplateTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/my/test2/SqlSessionTemplateTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="102">
+                <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -243,7 +236,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/defaults/DefaultSqlSessionFactory.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/binding/MapperProxy.java" />
         <option value="$PROJECT_DIR$/src/test/java/my/test2/SqlSessionTemplateTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java" />
@@ -262,6 +254,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/builder/xml/XMLMapperBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/apache/ibatis/io/ResolverUtil.java" />
         <option value="$PROJECT_DIR$/src/test/java/my/test1/SqlSessionTemplateTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -560,20 +553,11 @@
       <workItem from="1569737838114" duration="14880000" />
       <workItem from="1570079731104" duration="15572000" />
       <workItem from="1570107345662" duration="63000" />
-      <workItem from="1570107436369" duration="22182000" />
+      <workItem from="1570107436369" duration="23641000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SqlSessionTemplateTest_testCase1 - 2019.10.04 at 17h 32m 57s.xml">
-      <configuration name="SqlSessionTemplateTest.testCase1" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SqlSessionTemplateTest_testCase1_(1) - 2019.10.04 at 17h 33m 23s.xml">
-      <configuration name="SqlSessionTemplateTest.testCase1 (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SqlSessionTemplateTest_testCase1_(1) - 2019.10.04 at 17h 40m 09s.xml">
-      <configuration name="SqlSessionTemplateTest.testCase1 (1)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SqlSessionTemplateTest_testCase1 - 2019.10.04 at 17h 41m 00s.xml">
       <configuration name="SqlSessionTemplateTest.testCase1" configurationId="JUnit" />
     </history-entry>
@@ -595,9 +579,18 @@
     <history-entry file="SqlSessionTemplateTest_testCase1_(1) - 2019.10.04 at 20h 07m 31s.xml">
       <configuration name="SqlSessionTemplateTest.testCase1 (1)" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SqlSessionTemplateTest_testCase1_(1) - 2019.10.04 at 20h 07m 50s.xml">
+      <configuration name="SqlSessionTemplateTest.testCase1 (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SqlSessionTemplateTest_testCase1 - 2019.10.04 at 20h 09m 14s.xml">
+      <configuration name="SqlSessionTemplateTest.testCase1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SqlSessionTemplateTest_testCase1 - 2019.10.04 at 20h 09m 48s.xml">
+      <configuration name="SqlSessionTemplateTest.testCase1" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78565000" />
+    <option name="totallyTimeSpent" value="80024000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -620,16 +613,16 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32980457" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3516129" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4048387" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44032258" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.4935484" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23778501" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14739414" />
       <window_info anchor="right" id="Database" order="3" show_stripe_button="false" weight="0.32980457" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.32903227" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37258065" />
       <window_info anchor="bottom" id="Alibaba Cloud View" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -679,15 +672,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/my/test1/SqlSessionTemplateTest.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="101" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="102" />
+      <option name="time" value="103" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -805,16 +790,6 @@
       <provider editor-type-id="text-editor">
         <state>
           <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="68">
-            <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1002,13 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/my/test2/SqlSessionTemplateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/apache/ibatis/session/SqlSessionManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
@@ -1193,8 +1161,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/my/test1/SqlSessionTemplateTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" column="47" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="47" />
+        <state relative-caret-position="272">
+          <caret line="24" column="69" lean-forward="true" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/my/test2/SqlSessionTemplateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="102">
+            <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
