@@ -99,7 +99,55 @@ public class MapperProxyFactory<T> {
 
 到这里其实已经比较明了了，Proxy的代理类代理的接口是mapperInterface，即我们定义StudentMapper接口，
 
-mapperProxy即new MapperProxy得到的
+InvocationHander即new MapperProxy得到的
 
 ![MapperProxy](../picture/MapperProxy.png)
+
+然后重点看MapperProxy的invoke方法实现
+
+```java
+public class MapperProxy<T> implements InvocationHandler, Serializable {
+	...
+    private static Constructor<Lookup> lookupConstructor;
+    private final SqlSession sqlSession;
+    private final Class<T> mapperInterface;
+    private final Map<Method, MapperMethod> methodCache;
+  ...
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        try {
+            //来自Object的方法，例如toString、hashCode等
+            if (Object.class.equals(method.getDeclaringClass())) {
+                return method.invoke(this, args);
+            }
+            //默认方法
+            else if (method.isDefault()) {
+                return invokeDefaultMethod(proxy, method, args);
+            }
+        } catch (Throwable t) {
+            throw ExceptionUtil.unwrapThrowable(t);
+        }
+        //这里才是自定义方法
+        final MapperMethod mapperMethod = cachedMapperMethod(method);
+        return mapperMethod.execute(sqlSession, args);
+    }
+	...
+```
+
+当然后面的具体的mapperMethod调用方法又涉及一系列过程了：
+
+1. 一个MapperProxy内有个MapperMethod的缓存map，即methodCache，这个使用懒加载的方式用到的时候会创建然后缓存起来，简单说就是一个mapper.xml对应一个MapperProxy，mapper.xml种定义了很多mapper子节点方法，这一个子节点方法对应一个MapperMethod
+
+   ```java
+   private MapperMethod cachedMapperMethod(Method method) {
+           return methodCache.computeIfAbsent(method,
+                   k -> new MapperMethod(mapperInterface, method, sqlSession.getConfiguration())
+           );
+       }
+   ```
+
+2. 根据MapperMethod判断这是一个select调用，然后调用sqlSession.selectOne方法，然后调用到selectList方法(可以看到selectOne其实是调用selectList然后取第一条)
+3. 最后经历是否使用二级缓存等判断，最底层走到sqlSession找到它所对应的一个Executor，这个Executor根据配置文件中的statementType判断创建对的一个StatementHander，默认是PreparedStatementHandler，当然一般我们也不会用到其他的，其实一个StatementHander就对应一个配置文件中的mapper节点，然后最终执行数据查询操作。
+
+
 
