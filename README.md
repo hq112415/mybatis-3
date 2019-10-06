@@ -8,5 +8,5 @@ mybatis源代码阅读
 
 2. [Mapper代理](./blog/Mapper代理.md)
 
-3. [插件](./blog/plugin.md)
+3. [插件机制](./blog/plugin.md)
 
