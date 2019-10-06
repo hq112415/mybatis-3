@@ -116,7 +116,11 @@ public class Configuration {
      * 一个StudentMapper.class--->MapperProxyFactory<StudentMapper>
      */
     protected final MapperRegistry mapperRegistry = new MapperRegistry(this);
+    /**
+     * 插件
+     */
     protected final InterceptorChain interceptorChain = new InterceptorChain();
+
     protected final TypeHandlerRegistry typeHandlerRegistry = new TypeHandlerRegistry();
     protected final TypeAliasRegistry typeAliasRegistry = new TypeAliasRegistry();
     protected final LanguageDriverRegistry languageRegistry = new LanguageDriverRegistry();
@@ -547,6 +551,10 @@ public class Configuration {
         return MetaObject.forObject(object, objectFactory, objectWrapperFactory, reflectorFactory);
     }
 
+
+    /**
+     * 四个可以被插件拦截的对象
+     */
     public ParameterHandler newParameterHandler(MappedStatement mappedStatement, Object parameterObject, BoundSql boundSql) {
         ParameterHandler parameterHandler = mappedStatement.getLang().createParameterHandler(mappedStatement, parameterObject, boundSql);
         parameterHandler = (ParameterHandler) interceptorChain.pluginAll(parameterHandler);

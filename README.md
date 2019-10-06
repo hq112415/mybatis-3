@@ -4,7 +4,9 @@ mybatis源代码阅读
 
 它的其中大量用到了jdk动态代理，对jdk的动态代理很熟悉的话看起来就很顺
 
-1. [SqlSession](./bolg/SqlSesson.md)
+1. [SqlSession](./blog/SqlSesson.md)
 
-2. [Mapper代理](./bolg/Mapper代理.md)
+2. [Mapper代理](./blog/Mapper代理.md)
+
+3. [插件](./blog/plugin.md)
 

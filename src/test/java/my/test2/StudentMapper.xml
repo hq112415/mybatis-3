@@ -6,4 +6,7 @@
         select * from student where id = #{id}
     </select>
 
+    <select id="selectWithPage" parameterType="int" resultType="my.model.Student">
+        select * from student
+    </select>
 </mapper>
