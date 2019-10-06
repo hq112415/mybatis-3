@@ -368,9 +368,19 @@ Object res = invocation.proceed();
    <==      Total: 2
    ```
 
-   眼拙没看出它有多方便
+   可以看出来它执行了两个sql语句
+
+   ```sql
+   ==>  Preparing: SELECT count(0) FROM student 
+   ```
+
+   ```sql
+   ==>  Preparing: select * from student limit ?,? 
+   ==> Parameters: 0(Integer), 10(Integer)
+   ```
+
+   第一个sql语句算总数量，即totalCount，第二个sql语句自己加上了offset和count，得到了第一页的数据，的确是代替我们少了一部分代码。
 
 
 
 至此插件机制的原理结束，又是一个代理的很巧妙的应用，这需要对jdk动态代理很熟悉的理解
-
