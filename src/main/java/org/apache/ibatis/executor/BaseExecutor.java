@@ -117,6 +117,12 @@ public abstract class BaseExecutor implements Executor {
         return query(ms, parameter, rowBounds, resultHandler, key, boundSql);
     }
 
+    /**
+     * 以下是一级缓存相关的处理逻辑
+     * 1. 一个sqlSession有一个Executor, 一个Executor有一个本地缓存(localCache);
+     * 2. CacheKey的构成包括MapperStatement的一些特征参数：id + offset + count + sql + 方法入参 + 环境等;
+     * 3. 缓存中有就用缓存，没有就从数据库查询,查询到结果后设置到localCache中
+     */
     @SuppressWarnings("unchecked")
     @Override
     public <E> List<E> query(MappedStatement ms, Object parameter, RowBounds rowBounds, ResultHandler resultHandler, CacheKey key, BoundSql boundSql) throws SQLException {
@@ -135,6 +141,9 @@ public abstract class BaseExecutor implements Executor {
             queryStack++;
             list = resultHandler == null ? (List<E>) localCache.getObject(key) : null;
             if (list != null) {
+                /**
+                 * 这里面是存储过程相关的，忽略
+                 */
                 handleLocallyCachedOutputParameters(ms, key, parameter, boundSql);
             } else {
                 list = queryFromDatabase(ms, parameter, rowBounds, resultHandler, key, boundSql);
@@ -148,6 +157,10 @@ public abstract class BaseExecutor implements Executor {
             }
             // issue #601
             deferredLoads.clear();
+            /**
+             * 这里会判断一级缓存级别是否是STATEMENT级别，如果是的话，就清空缓存，
+             * 这也就是STATEMENT级别的一级缓存无法共享localCache的原因
+             */
             if (configuration.getLocalCacheScope() == LocalCacheScope.STATEMENT) {
                 // issue #482
                 clearLocalCache();

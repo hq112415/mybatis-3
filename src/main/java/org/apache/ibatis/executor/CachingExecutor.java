@@ -91,7 +91,11 @@ public class CachingExecutor implements Executor {
              * </select>
              */
             if (ms.isUseCache() && resultHandler == null) {
+                /**
+                 * ensureNoOutParams是处理存储过程的，略
+                 */
                 ensureNoOutParams(ms, boundSql);
+
                 @SuppressWarnings("unchecked")
                 List<E> list = (List<E>) tcm.getObject(cache, key);
                 if (list == null) {

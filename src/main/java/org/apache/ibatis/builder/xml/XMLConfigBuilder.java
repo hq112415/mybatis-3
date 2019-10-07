@@ -234,7 +234,8 @@ public class XMLConfigBuilder extends BaseBuilder {
         configuration.setAutoMappingBehavior(AutoMappingBehavior.valueOf(props.getProperty("autoMappingBehavior", "PARTIAL")));
         configuration.setAutoMappingUnknownColumnBehavior(AutoMappingUnknownColumnBehavior.valueOf(props.getProperty("autoMappingUnknownColumnBehavior", "NONE")));
         /**
-         * 默认开启二级缓存
+         * 默认开启二级缓存, 当然二级缓存是Mapper(namespace)级别的，二者都要使用才有用
+         * cacheEnabled == true，会创建一个CacheExecutor，仅此而已
          */
         configuration.setCacheEnabled(booleanValueOf(props.getProperty("cacheEnabled"), true));
         configuration.setProxyFactory((ProxyFactory) createInstance(props.getProperty("proxyFactory")));

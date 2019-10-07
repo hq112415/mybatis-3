@@ -87,11 +87,18 @@ public class XMLMapperBuilder extends BaseBuilder {
              */
             builderAssistant.setCurrentNamespace(namespace);
             /**
-             *
+             *  cache-ref 代表引用别的命名空间的Cache配置，两个命名空间的操作使用的是同一个Cache
              */
             cacheRefElement(context.evalNode("cache-ref"));
             /**
+             * cache配置，它的优先级高于cache-ref
              *
+             *  type : 缓存类型，默认PERPETUAL，即HashMap
+             *  eviction : 定义回收的策略，常见的有FIFO，LRU，默认LRU
+             *  flushInterval : 配置一定时间自动刷新缓存，单位是毫秒
+             *  size : 最多缓存对象的个数 :
+             *  readOnly : 是否只读，若配置可读写，则需要对应的实体类能够序列化
+             *  blocking : 若缓存中找不到对应的key，是否会一直blocking，直到有对应的数据进入缓存
              */
             cacheElement(context.evalNode("cache"));
             parameterMapElement(context.evalNodes("/mapper/parameterMap"));
