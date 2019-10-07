@@ -131,7 +131,7 @@ public abstract class BaseExecutor implements Executor {
             throw new ExecutorException("Executor was closed.");
         }
         /**
-         * isFlushCacheRequired是在 mapper节点中配置的flushCache配置，同样对于对操作为false，写操作为true
+         * isFlushCacheRequired是在 mapper节点中配置的flushCache配置，同样对于读操作为false，写操作为true
          */
         if (queryStack == 0 && ms.isFlushCacheRequired()) {
             clearLocalCache();
