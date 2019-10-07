@@ -1,18 +1,3 @@
-/**
- * Copyright 2009-2019 the original author or authors.
- * <p>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.apache.ibatis.executor;
 
 import org.apache.ibatis.cache.Cache;
@@ -86,11 +71,25 @@ public class CachingExecutor implements Executor {
     }
 
     @Override
-    public <E> List<E> query(MappedStatement ms, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler, CacheKey key, BoundSql boundSql)
+    public <E> List<E> query(MappedStatement ms, Object parameterObject, RowBounds rowBounds, ResultHandler resultHandler,
+                             CacheKey key, BoundSql boundSql)
             throws SQLException {
+        /**
+         * 二级缓存相关
+         * 这个cache是在mapper.xml中配置的，两个地方
+         *  <cache-ref namespace="xx"/>
+         *  <cache/>  -- 它的优先级高于cache-ref,会替代cache-ref
+         *
+         */
         Cache cache = ms.getCache();
         if (cache != null) {
             flushCacheIfRequired(ms);
+            /**
+             * isUseCache 为配置文件中配置的userCache属性，默认如果语句是select语句，它为true，非select语句，它为false
+             * <select id="selectById" parameterType="long" resultType="my.model.Student" useCache="false">
+             *         select * from student where id = #{id}
+             * </select>
+             */
             if (ms.isUseCache() && resultHandler == null) {
                 ensureNoOutParams(ms, boundSql);
                 @SuppressWarnings("unchecked")

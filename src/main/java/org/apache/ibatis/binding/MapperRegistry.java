@@ -45,15 +45,21 @@ public class MapperRegistry {
             }
             boolean loadCompleted = false;
             try {
+                /**
+                 * 1. 在knownMappers 中加入 type 对应的 MapperProxyFactory
+                 * 这给后面使用sqlSession.getMapper() 准备
+                 */
                 knownMappers.put(type, new MapperProxyFactory<>(type));
                 // It's important that the type is added before the parser is run
                 // otherwise the binding may automatically be attempted by the
                 // mapper parser. If the type is already known, it won't try.
                 /**
+                 * 2. 这里开始解析配置文件了
                  * 这里type = my.test2.StudentMapper.class
                  */
                 MapperAnnotationBuilder parser = new MapperAnnotationBuilder(config, type);
                 parser.parse();
+
                 loadCompleted = true;
             } finally {
                 if (!loadCompleted) {

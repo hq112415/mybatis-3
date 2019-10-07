@@ -86,7 +86,13 @@ public class XMLMapperBuilder extends BaseBuilder {
              * 这里又设置namespace，并作检查
              */
             builderAssistant.setCurrentNamespace(namespace);
+            /**
+             *
+             */
             cacheRefElement(context.evalNode("cache-ref"));
+            /**
+             *
+             */
             cacheElement(context.evalNode("cache"));
             parameterMapElement(context.evalNodes("/mapper/parameterMap"));
             resultMapElements(context.evalNodes("/mapper/resultMap"));

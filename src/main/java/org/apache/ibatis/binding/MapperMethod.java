@@ -15,15 +15,6 @@
  */
 package org.apache.ibatis.binding;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
 import org.apache.ibatis.annotations.Flush;
 import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.cursor.Cursor;
@@ -37,6 +28,15 @@ import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
+
+import java.lang.reflect.Array;
+import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 /**
  * @author Clinton Begin
@@ -54,6 +54,17 @@ public class MapperMethod {
         this.method = new MethodSignature(config, mapperInterface, method);
     }
 
+    /**
+     * 这里绕的挺繁琐的，我看出来一个目的: 为了获得代理对象调用的方法类型，要知道这个execute的唯一调用者MapperProxy
+     * 假如你调用mapper.selectById(1L)，那么怎么才能联系到下面的SELECT分支上呢？
+     * 1. 方法名是selectById，然后就根据my.test2.StudentMapper.selectById这个名字从 Map<String, MappedStatement> mappedStatements
+     * 中获得xml配置文件中配置的MappedStatement对象，然后从节点信息中就可以获得这个方法类型了(select|update|insert 等)
+     * 2. 根据方法类型进入对应的分支去执行
+     *
+     * @param sqlSession
+     * @param args
+     * @return
+     */
     public Object execute(SqlSession sqlSession, Object[] args) {
         Object result;
         switch (command.getType()) {

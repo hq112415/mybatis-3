@@ -60,7 +60,7 @@ public class DefaultSqlSessionFactory implements SqlSessionFactory {
 
             tx = transactionFactory.newTransaction(environment.getDataSource(), level, autoCommit);
             /**
-             * new了一个executor，默认的是SimpleExecutor，但是我没配置cacheEnabled，它默认是false的，所以其实是CachingExecutor，
+             * new了一个executor，默认的是SimpleExecutor，但是我没配置cacheEnabled，它默认是true的，所以其实是CachingExecutor，
              * 这里其实涉及了缓存了，后面看到在再说
              */
             final Executor executor = configuration.newExecutor(tx, execType);

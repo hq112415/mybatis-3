@@ -60,6 +60,11 @@ public class MapperProxy<T> implements InvocationHandler, Serializable {
             throw ExceptionUtil.unwrapThrowable(t);
         }
         //这里才是自定义方法
+        /**
+         * MapperMethod主要两个属性
+         *     private final SqlCommand command; -- 记录方法名(selectById)和方法类型(SELECT)
+         *     private final MethodSignature method; -- 记录方法的方面属性，方法返回类型等
+         */
         final MapperMethod mapperMethod = cachedMapperMethod(method);
         return mapperMethod.execute(sqlSession, args);
     }

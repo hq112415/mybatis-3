@@ -79,7 +79,9 @@ public class MapperAnnotationBuilder {
             parseCache();
             parseCacheRef();
             Method[] methods = type.getMethods();
-            //这里面是method上的注解解析
+            /**
+             * 这里面是method上的注解解析
+             */
             for (Method method : methods) {
                 try {
                     // issue #237

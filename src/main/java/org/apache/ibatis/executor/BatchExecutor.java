@@ -1,18 +1,3 @@
-/**
- * Copyright 2009-2019 the original author or authors.
- * <p>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.apache.ibatis.executor;
 
 import org.apache.ibatis.cursor.Cursor;
@@ -58,6 +43,17 @@ public class BatchExecutor extends BaseExecutor {
         final BoundSql boundSql = handler.getBoundSql();
         final String sql = boundSql.getSql();
         final Statement stmt;
+        /**
+         * 这里的意思是如果当前的sql与statement与上一个相同，那么就用上一个statement，并设置参数
+         * 如果不同就重新创建一个statement，假如sql来的顺序为
+         * AAB，那么会生成两个statement
+         * AABA，那么会生成三个statement
+         * AABAB，那么会生成四个statement
+         * AABABB，也是四个
+         * 这样可以保证有序性，假如你用一个map去做的话，sql执行顺序就没法保证
+         * {@see https://my.oschina.net/zudajun/blog/667214}
+         *
+         */
         if (sql.equals(currentSql) && ms.equals(currentStatement)) {
             int last = statementList.size() - 1;
             stmt = statementList.get(last);
@@ -119,6 +115,9 @@ public class BatchExecutor extends BaseExecutor {
                 applyTransactionTimeout(stmt);
                 BatchResult batchResult = batchResultList.get(i);
                 try {
+                    /**
+                     * 最终执行批处理 stmt.executeBatch()
+                     */
                     batchResult.setUpdateCounts(stmt.executeBatch());
                     MappedStatement ms = batchResult.getMappedStatement();
                     List<Object> parameterObjects = batchResult.getParameterObjects();

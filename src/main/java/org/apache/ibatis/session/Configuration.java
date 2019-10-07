@@ -679,6 +679,9 @@ public class Configuration {
     }
 
     public void addMappedStatement(MappedStatement ms) {
+        /**
+         * 这个为后面使用sqlSession.selectOne()方式做准备
+         */
         mappedStatements.put(ms.getId(), ms);
     }
 
